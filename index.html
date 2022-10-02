@@ -12,25 +12,32 @@
 
 <body>
 
-<input type="hidden" name="_next" value="https://jcgilbert70.github.io/email-comtact-form/success.html">
+
 
     <div class="contact-title">
         <h1>Say Hello</h1>
         <h2>Jeff would love to hear from you</h2>
-            <div class="contact-form">
-                <form id="contact-form" action="https://formsubmit.co/cd132a47f80ceb79db6e2de04f589a8e" method="POST"> <!-- </form>action="contact-form-handler.php"> -->
-                    <input name="name" type="text" class="form-control" placeholder="Your Name" required>
-                    <br>
-                    <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-                    <br>
+        <div class="contact-form">
+            <form id="contact-form" action="https://formsubmit.co/cd132a47f80ceb79db6e2de04f589a8e" method="POST">
+                <!-- </form>action="contact-form-handler.php"> -->
+                <!-- HONEYPOT -->
+                <input type="text" name="_honey" style="display: none;">
+                <!-- DISABLE CAPTCHA -->
+                <input type="hidden" name="_captcha" value="false">
 
-                    <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea>
-                    <br>
 
-                    <input type="submit" class="form-control submit" value="SEND MESSAGE">
-                </form>
-            </div>
+                <input name="name" type="text" class="form-control" placeholder="Your Name" required>
+                <br>
+                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+                <br>
+                <input type="hidden" name="_next" value="https://jcgilbert70.github.io/email-comtact-form/success.html">
+                <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea>
+                <br>
+
+                <input type="submit" class="form-control submit" value="SEND MESSAGE">
+            </form>
         </div>
+    </div>
     </div>
 </body>
 
